@@ -1,12 +1,21 @@
 <h1>All articles</h1>
 <% @articles.each do |article|%>
-  <h2>This is the article <%= article.id%></h2>
-  <p>
-    <strong>Article title</strong> <br>
-    <%=article.title%>
-  </p>
-  <p>
-    <strong>Article detail</strong> <br>
-    <%=article.body%>
-  </p>
+  <h2 class='article-title'>This is the article <%= article.id%></h2>
+  <div class='article-container'>
+    <p class = 'article-item'>
+      <strong>Title</strong> <br>
+      <%=article.title%>
+    </p>
+    <p class = 'article-item'>
+      <strong>Detail</strong> <br>
+      <%=article.body%>
+    </p>
+    <div class = 'article-item'>
+      <strong>Actions</strong> <br>
+      <%=link_to 'Show '%>
+      <%=link_to 'Edit '%>
+      <%=link_to 'Delete '%>
+    </div>
+  </div>
+  
 <%end%>
