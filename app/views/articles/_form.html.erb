@@ -1,0 +1,25 @@
+<% if @article.errors.any? %>
+  <h2>You have theses errors</h2>
+  <ul>
+  <% @article.errors.full_messages.each do |error| %>
+    <li>
+    <%= error %>
+    </li>
+    <% end %>
+  </ul>
+<% end %>
+
+<%= form_with(model: @article, local: true) do |form| %>
+  <p>
+    <%=form.label :title%> <br />
+    <%=form.text_field :title%>
+  </p>
+
+  <p>
+    <%=form.label :body%>  <br />
+    <%=form.text_area :body%>
+  </p>
+  <p>
+    <%= form.submit%>
+  </p>
+<% end %>
