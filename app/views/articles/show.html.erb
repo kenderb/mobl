@@ -1,5 +1,13 @@
+
+
 <h1>Article details</h1>
 <p><strong>Title:</strong></p>
 <p><%= @article.title %></p>
 <p><strong>Content:</strong></p>
 <p><%= @article.body %></p>
+<div>
+  <%=link_to 'Edit ', edit_article_path(@article)%> |
+  <%=link_to 'Delete ', article_path(@article), method: :delete, data: {confirm: 'Are you sure that you want to delete thsi article?'}%> |
+  <%=link_to 'See all articles ', articles_path%>
+</div>
+
