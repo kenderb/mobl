@@ -1,13 +1,5 @@
-<% if @article.errors.any? %>
-  <h2>You have theses errors</h2>
-  <ul>
-  <% @article.errors.full_messages.each do |error| %>
-    <li>
-    <%= error %>
-    </li>
-    <% end %>
-  </ul>
-<% end %>
+
+<%= render 'errors' %>
 
 <%= form_with(model: @article, local: true) do |form| %>
   <p>
