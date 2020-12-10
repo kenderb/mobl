@@ -1,17 +1,17 @@
 
 <%= render 'errors' %>
+<div class="container">
+  <%= form_with(model: @article, local: true) do |form| %>
+    <div class="form-group">
+      <%=form.label :title%> <br />
+      <%=form.text_field :title, class: "form-control"%>
+    </div>
 
-<%= form_with(model: @article, local: true) do |form| %>
-  <p>
-    <%=form.label :title%> <br />
-    <%=form.text_field :title%>
-  </p>
+    <div class="form-group">
+      <%=form.label :body%>  <br />
+      <%=form.text_area :body, class: "form-control"%>
+    </div>
+    <%= form.submit class: "btn btn-primary"%>
 
-  <p>
-    <%=form.label :body%>  <br />
-    <%=form.text_area :body%>
-  </p>
-  <p>
-    <%= form.submit%>
-  </p>
-<% end %>
+  <% end %>
+</div>

@@ -1,5 +1,14 @@
-<h1>Create a new article</h1>
+
+<div class="card text-center">
+  <div class="card-header">
+    <h4>Create a new article</h4>
+  </div>
+  <div class="card-body">
+    <%= render 'form' %>
+  </div>
+  <div class="card-footer text-muted">
+    <%=link_to 'See all articles ', articles_path%>
+  </div>
+</div>
 
 
-<%= render 'form' %>
-<%=link_to 'See all articles ', articles_path%>

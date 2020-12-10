@@ -1,0 +1,33 @@
+<header>
+  <nav class="navbar navbar-expand-lg navbar-light bg-info shadow">
+      <%=link_to 'Mold APP', root_path, class: 'navbar-brand text-white'%>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <%=link_to 'Home ', root_path, class: 'nav-link text-white'%>
+          </li>
+          <li class="nav-item">
+            <%=link_to 'Articles', articles_path, class: 'nav-link text-white'%>
+          </li>
+          <li class="nav-item">
+            <%=link_to 'About page ', about_path, class: 'nav-link text-white'%>
+          </li>
+          
+        </ul>
+        <div class="dropdown">
+            <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              User name
+            </a>
+            <div class="dropdown-menu  bg-dark" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item text-white" href="#">settings</a>
+              <a class="dropdown-item text-white" href="#">friend list</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item text-white" href="#">Log out</a>
+            </div>
+        </div>
+      </div>
+    </nav>
+</header>

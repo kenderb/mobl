@@ -1,4 +1,12 @@
-<h1>Edit an article</h1>
-<%= render 'form' %>
+<div class="card text-center">
+  <div class="card-header">
+    <h4>Edit an article</h4>
+  </div>
+  <div class="card-body">
+    <%= render 'form' %>
+  </div>
+  <div class="card-footer text-muted">
+    <%=link_to 'See all articles ', articles_path%>
+  </div>
+</div>
 
-<%=link_to 'See all articles ', articles_path%>
